@@ -1,0 +1,49 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  token            String    @unique
+  id               String    @id @unique
+  username         String    @unique
+  groupId          String    @default("")
+  voiceChannelId   String?
+  rpc_type         String    @default("COMPETING")
+  rpc_name         String    @default("💫 Shadow SB")
+  rpc_details      String    @default("💫 Shadow SB")
+  rpc_state        String    @default("")
+  rpc_large_text   String    @default("Connected as {user}")
+  rpc_large_image  String    @default("{user_avatar}")
+  rpc_small_text   String    @default("")
+  rpc_small_image  String    @default("")
+  rpc_url          String    @default("https://www.twitch.tv/aquinasctf")
+  rpc_button1_url  String    @default("{supportLink}")
+  rpc_button1_text String    @default("Join us !")
+  rpc_button2_url  String    @default("")
+  rpc_button2_text String    @default("")
+  joinedAt         DateTime  @default(now())
+  premium          Boolean   @default(false)
+  isAfk            Boolean   @default(false)
+  nitroSniper      Boolean   @default(false)
+  antighostping    Boolean   @default(false)
+  antigroup        Boolean   @default(false)
+  antiping         Boolean   @default(false)
+  antimute         Boolean   @default(false)
+  antipubmp        Boolean   @default(false)
+  antimp           Boolean   @default(false)
+}
+
+model Snipe {
+  channelId  String   @id @unique
+  authorId   String
+  content    String
+  sendAt     String
+}

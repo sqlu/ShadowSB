@@ -1,0 +1,28 @@
+{
+  "name": "discord-slash-commands-selfbot",
+  "version": "0.9.5",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate-db": "prisma migrate dev",
+    "build": "npm run clean && tsc",
+    "clean": "rimraf dist",
+    "dev": "npm run clean && tsc && node .",
+    "start": "node ."
+  },
+  "devDependencies": {
+    "onchange": "^7.1.0",
+    "prisma": "^6.2.1",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@prisma/client": "6.2.1",
+    "discord.js": "^14.17.3",
+    "discord.js-selfbot-v13": "^3.5.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7"
+  }
+}

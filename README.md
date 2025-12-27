@@ -117,8 +117,8 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 ## 📞 Contact
-
+      
 If you have any questions, feel free to reach out:
 
 - GitHub: [111tokyo](https://github.com/111tokyo), [Snayzou](https://github.com/sqlu)
-- Discord: `111tokyo`, `early.lover`
+- Discord: `111tokyo`, `earlylover`
